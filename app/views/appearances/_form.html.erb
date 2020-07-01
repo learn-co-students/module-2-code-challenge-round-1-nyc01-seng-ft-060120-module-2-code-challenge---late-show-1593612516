@@ -1,0 +1,18 @@
+<%= form_for @appearance do |f| %>
+    <%= f.collection_select :guest_id, Guest.all, :id, :name, :prompt => 'Please Select the Guest' %>
+    <br>
+    <%= f.collection_select :episode_id, Episode.all, :id, :number, :prompt => 'Please Select the Episode Number' %>
+    <br>
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+    <br>
+    <%= f.submit %>
+<%end%>
+
+<div>
+    <%if flash[:new_errors]%>
+        <%flash[:new_errors].each do |error|%>
+            <p><%= error %></p>
+        <%end%>
+    <%end%>
+</div>
