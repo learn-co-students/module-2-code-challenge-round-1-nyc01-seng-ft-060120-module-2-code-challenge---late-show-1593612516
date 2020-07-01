@@ -1,0 +1,7 @@
+<h1> Guest Show Page for <%=@guest.name%></h1>
+
+<p><%=@guest.name%> appeared in the following episodes: <% @guest.appearances.each do |app|%>
+    <ul>
+        <li>Episode #<%= app.episode.number%>  ||  Aired on: <%= link_to app.episode.date, episode_path(app.episode.id)%>  || Episode Rating: <%= app.rating%></li>
+    </ul>
+    <%end%>
