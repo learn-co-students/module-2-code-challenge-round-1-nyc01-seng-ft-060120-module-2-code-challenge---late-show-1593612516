@@ -2,6 +2,9 @@
 
 <p><%=@guest.name%> appeared in the following episodes: <% @guest.appearances.each do |app|%>
     <ul>
-        <li>Episode #<%= app.episode.number%>  ||  Aired on: <%= link_to app.episode.date, episode_path(app.episode.id)%>  || Episode Rating: <%= app.rating%></li>
+        <li><%= link_to "Episode # #{app.episode.number}", episode_path(app.episode.id)%>  ||  Aired on: <%= link_to app.episode.date, episode_path(app.episode.id)%>  || Episode Rating: <%= app.rating%></li>
     </ul>
     <%end%>
+
+    <hr>
+    <%= link_to "View Guest Index Page", guests_path%>
