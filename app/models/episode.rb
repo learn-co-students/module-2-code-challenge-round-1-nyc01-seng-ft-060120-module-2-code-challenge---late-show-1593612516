@@ -6,7 +6,6 @@ class Episode < ApplicationRecord
     # Return the sum if any ratings else 0
     ratings = self.appearances.map(&:rating)
     sum = ratings.sum()
-    p ratings.size / sum
     if sum > 0
       return (sum / ratings.size).to_f
     end
