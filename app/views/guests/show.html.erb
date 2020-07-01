@@ -3,7 +3,7 @@
 
 <h3>Appearances:</h3>
 <dl>
-    <%@guest.appearances.each do |appearance|%>
+    <%@sorted.reverse.each do |appearance|%>
        <dt>Episode: <%= link_to appearance.episode.date.strftime("%B %d, %Y"), episode_path(appearance.episode) %></dt>
        <dd>Rating: <%= appearance.rating %></dd>
     <%end%>
