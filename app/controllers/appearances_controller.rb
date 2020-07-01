@@ -14,11 +14,6 @@ class AppearancesController < ApplicationController
         end
     end
 
-    # Possibly not needed
-    def show
-        @appearance = Appearance.find(params[:id])
-    end
-
     private
     def appearance_params
         params.require(:appearance).permit(:guest_id, :episode_id, :rating)
