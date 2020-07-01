@@ -1,0 +1,26 @@
+<%# GuestsController#show template for this request format and variant. %>
+
+<%# On the Guest show page, add a list of the Episodes the Guest has appeared on.
+
+For each Episode, show the:
+
+- date of the Episode
+- rating for the Appearance
+
+Each Episode date should link to the show page for that Episode. %>
+
+<h1><%= @guest.name %></h1>
+<% @guest.appearances.each do |appearance| %>
+    <p>
+        Aired: 
+        <%= link_to appearance.episode.date, episode_path(appearance.episode.id) %>
+         <%# episodes/x (the id of the episode of the appearance)  %>
+        // Rated: 
+        <%= appearance.rating %>
+    </p>
+<% end %>
+
+
+
+
+

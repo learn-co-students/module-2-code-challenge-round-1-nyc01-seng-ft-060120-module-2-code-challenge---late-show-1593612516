@@ -1,0 +1,17 @@
+<%# On the episode show page, a user should see:
+
+- Episode date
+- A list of the guests who were on that episode
+- Each guest's name should link to the Guest Show page %>
+
+
+<h1>This Episode was released on: <%= @episode.date %></h1>
+<h2>It was number <%= @episode.number %> out of all released episodes.</h2>
+
+<%# Had Michael J. Fox 4 times so I parsed it. %>
+<% @episode.guests.uniq.each do |guest| %>
+    Starring:
+    <%# Needs guest show page %>
+    <p><%= link_to guest.name, guest_path(guest) %></p>
+<% end %>
+

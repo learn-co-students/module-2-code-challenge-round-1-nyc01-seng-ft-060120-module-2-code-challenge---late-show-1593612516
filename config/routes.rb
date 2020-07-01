@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :guests, only: [:index]
-  resources :episodes, only: [:index]
+  resources :appearances
+  # route needs to match [GET] "/guests/x"  
+  resources :guests, only: [:index, :show]
+  # route needs to match [GET] "/episodes/x"
+  resources :episodes, only: [:index, :show]
 end

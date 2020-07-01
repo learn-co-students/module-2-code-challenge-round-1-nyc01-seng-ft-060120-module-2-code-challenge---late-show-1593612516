@@ -1,0 +1,28 @@
+<%# A user can fill out a form to create a new Appearance. They can:
+
+- Choose an existing guest from a select dropdown
+- Choose an existing episode from a select dropdown
+- Enter a numeric rating
+- Submit the form %>
+
+
+<%# AppearancesController#new template for request.formats: ["text/html"]  %>
+<h1>Create New Appearance</h1>
+
+<%= form_for @appearance do |f| %>
+    
+    <%= f.label :guest_id %> 
+    <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+    
+    <%= f.label :episode_id %> 
+    <%= f.collection_select :episode_id, Episode.all, :id, :date %>
+
+    <%= f.label :rating %> 
+    <%= f.number_field :rating %>
+
+    <%= f.submit %>
+     
+<% end %>  
+
+
+

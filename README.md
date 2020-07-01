@@ -21,7 +21,7 @@ Before you begin coding your solution, clone this repo and then `cd` into it. Th
 
 The application keeps track of the guests that have appeared on the show.
 
-There are three models in the domain: Guest, Episode, and Appearance.
+There are three models in the domain: Guest, Episode, and Appearance.  
 
 Guests and Episodes have a many to many relationship through Appearances. A single Appearance belongs to one Guest and one Episode.
 
@@ -113,6 +113,8 @@ The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` a
 - Add a validation to ensure that the rating is between 1 and 5.
 - Add handling for this error to the Appearance create action.
 - The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
+
+GO BACK AND TEST BEFORE MOVING ON, DUDE
 
 ### 6. Advanced: Additional Appearance Validation
 
