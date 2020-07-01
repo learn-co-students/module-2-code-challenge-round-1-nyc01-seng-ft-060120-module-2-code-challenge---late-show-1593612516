@@ -5,4 +5,5 @@ class Appearance < ApplicationRecord
   validates :rating, presence: true
   validates :rating, numericality: true
   validates :rating, inclusion: {in: (1..5) }
+  validates :guest_id, uniqueness: {scope: :episode_id, message: "can only appear once per episode"}
 end
