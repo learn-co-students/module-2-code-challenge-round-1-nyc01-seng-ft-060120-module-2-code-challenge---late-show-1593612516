@@ -13,7 +13,7 @@ In this repo, there is a Rails application with some features built out. Your jo
 - ActiveRecord
 - Validations
 
-## Setup
+<!-- ## Setup
 
 Before you begin coding your solution, clone this repo and then `cd` into it. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
 
@@ -24,14 +24,14 @@ The application keeps track of the guests that have appeared on the show.
 There are three models in the domain: Guest, Episode, and Appearance.
 
 Guests and Episodes have a many to many relationship through Appearances. A single Appearance belongs to one Guest and one Episode.
-
+ -->
 ## What You Already Have
 
-The starter code includes migrations, models, and seed data for Guests and Episodes. There are also routes, controller actions, and views to support listing the guests and episodes.
-
-After running the setup instructions above, visiting `'/guests'` will display all of the guests, and visiting `'/episodes'` will display all of the episodes.
-
-***Schema***
+<!-- The starter code includes migrations, models, and seed data for Guests and Episodes. There are also routes, controller actions, and views to support listing the guests and episodes.
+ -->
+<!-- After running the setup instructions above, visiting `'/guests'` will display all of the guests, and visiting `'/episodes'` will display all of the episodes.
+ -->
+<!-- ***Schema***
 
 Episodes
 
@@ -58,7 +58,7 @@ Guests
 ### Routes, Controllers and Views
 
 - Episodes index
-- Guests index
+- Guests index -->
 
 ## Instructions
 
