@@ -1,11 +1,17 @@
 <h1>Log an Appearance</h1>
 
+<% if flash[:my_errors] %>
+    <% flash[:my_errors].each do |error| %>
+      <%= error %>
+    <% end %>
+<% end %>
+
 <%= form_for @appearance do |f| %>
     <%= f.label :episode_id %>
-    <%= f.collection_select :episode_id, Episode.all, :id, :number %>
+    <%= f.collection_select :episode_id, @episodes, :id, :number %>
 
     <%= f.label :guest_id %>
-    <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+    <%= f.collection_select :guest_id, @guests, :id, :name %>
 
     <%= f.label :rating %>
     <%= f.number_field :rating %>
