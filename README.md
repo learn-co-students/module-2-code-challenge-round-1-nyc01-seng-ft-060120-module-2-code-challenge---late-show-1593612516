@@ -1,4 +1,4 @@
-# Rails Code Challenge - Late Show
+<!-- # Rails Code Challenge - Late Show
 
 For this assessment, you'll be working with Late Night TV show domain.
 
@@ -58,7 +58,7 @@ Guests
 ### Routes, Controllers and Views
 
 - Episodes index
-- Guests index
+- Guests index -->
 
 ## Instructions
 
@@ -68,41 +68,41 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 
 
-### 1. Appearance Model
+<!-- ### 1. Appearance Model
 
 To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
 
 - Guest can appear on many episodes
 - Episode can have multiple guests
-- Appearance stores a numeric rating
+- Appearance stores a numeric rating -->
 
-### 2. New Appearance Form
+<!-- <!-- ### 2. New Appearance Form
 
 A user can fill out a form to create a new Appearance. They can:
 
 - Choose an existing guest from a select dropdown
 - Choose an existing episode from a select dropdown
 - Enter a numeric rating
-- Submit the form
+- Submit the form -->
 
-After submitting the form, the user should be redirected to the selected episode's show page.
+After submitting the form, the user should be redirected to the selected episode's show page. -->
 
-### 3. Episode Show Page
+<!-- ### 3. Episode Show Page
 
 On the episode show page, a user should see:
 
 - Episode date
-- A list of the guests who were on that episode
+- A list of the guests who were on that episode -->
 - Each guest's name should link to the Guest Show page
 
-### 4. Guest Show Page Episode links
+<!-- ### 4. Guest Show Page Episode links
 
 On the Guest show page, add a list of the Episodes the Guest has appeared on.
 
 For each Episode, show the:
 
 - date of the Episode
-- rating for the Appearance
+- rating for the Appearance -->
 
 Each Episode date should link to the show page for that Episode.
 
