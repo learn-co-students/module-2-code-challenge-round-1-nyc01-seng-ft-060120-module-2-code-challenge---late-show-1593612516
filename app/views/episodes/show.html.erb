@@ -1,0 +1,7 @@
+<h1><%= @episode.date %></h1>
+
+<% @episode.guests.each do |guest|%>
+   <li> <%= link_to guest.name, guest_path(guest) %> </li>
+<% end %> <br>
+ 
+ Average Rating: <%= @episode.average_rating / 2 %>
