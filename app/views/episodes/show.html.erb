@@ -3,5 +3,5 @@
 <p><%=@episode.date%></p>
 
 <%@episode.guests.each do |guest|%>
-<p><%=guest.name%></p>
+<p><%=link_to guest.name, guest_path(guest)%></p>
 <%end%>

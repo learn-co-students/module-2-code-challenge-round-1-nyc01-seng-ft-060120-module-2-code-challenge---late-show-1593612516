@@ -8,6 +8,7 @@
 
 Guest.destroy_all
 Episode.destroy_all
+Appearance.destroy_all
 
 require 'csv'
 
@@ -26,7 +27,7 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
-Appearance.create(rating: 10, episode_id:Episode.all.ids.sample, guest_id:Guest.all.ids.sample) 
+Appearance.create(rating: 4, episode_id:Episode.all.ids.sample, guest_id:Guest.all.ids.sample) 
 Appearance.create(rating: 5, episode_id:Episode.all.ids.sample, guest_id:Guest.all.ids.sample) 
-Appearance.create(rating: 8, episode_id:Episode.all.ids.sample, guest_id:Guest.all.ids.sample) 
+Appearance.create(rating: 1, episode_id:Episode.all.ids.sample, guest_id:Guest.all.ids.sample) 
 
