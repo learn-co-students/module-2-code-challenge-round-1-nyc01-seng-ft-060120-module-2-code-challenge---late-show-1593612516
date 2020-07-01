@@ -8,10 +8,15 @@ class AppearancesController < ApplicationController
 
     def create
         @appearance = Appearance.create(appearance_params)
+        
+        # if @appearance.valid?
         # byebug (Episode needs Show Page)
         # redirected to the selected episode's show page.
-        redirect_to episode_path(episode)
-        # go to /episode/x(episode.id) 
+             redirect_to episode_path(episode)
+            # go to /episode/x(episode.id)
+        # else 
+            # @appearance.errors.messages
+            # redirect_to new_appearance_path
     end
 
 
