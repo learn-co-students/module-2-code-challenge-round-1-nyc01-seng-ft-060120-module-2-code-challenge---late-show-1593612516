@@ -5,6 +5,9 @@
 <p>Episode Date:<br><%=link_to episode.date, episode_path(episode)%></p>
 <%end%>
 
-<%@guest.appearances.each do |appearance|%>
+
+
+<% @guest.appearances.each do |appearance|%>
 <p>Appearance Rating:<br><%=appearance.rating%></p>
 <%end%>
+
