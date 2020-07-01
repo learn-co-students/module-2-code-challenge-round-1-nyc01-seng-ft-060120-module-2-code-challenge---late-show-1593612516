@@ -1,0 +1,6 @@
+<h1><%= @guest.name %> - <%= @guest.occupation %></h1>
+<h3>Episodes:</h3>
+
+<% @guest.sorted_episodes.each do |episode| %>
+    Episode <%= episode.number %> - <%= link_to episode.date, episode_path(episode) %> - Rating: <%= episode.find_rating(@guest) %></br>
+<% end %>
