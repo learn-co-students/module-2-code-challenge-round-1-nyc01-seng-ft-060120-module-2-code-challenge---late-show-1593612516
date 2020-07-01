@@ -2,9 +2,10 @@
 
 <ul>
 <% @guest.episodes.each do |episode| %>
-    <li><%=link_to(episode.date, episode_path(episode)) %> 
+    <%=link_to(episode.date, episode_path(episode)) %> 
 <% end %>
 <% @guest.appearances.each do |appearance| %>
     <%= appearance.rating %>
 <% end %> </li>
 </ul>
+
