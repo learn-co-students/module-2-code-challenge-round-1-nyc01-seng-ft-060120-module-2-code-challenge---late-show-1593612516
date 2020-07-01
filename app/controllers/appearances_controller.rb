@@ -9,7 +9,7 @@ class AppearancesController < ApplicationController
     def create 
         @appearance = Appearance.create(appearance_params)
         if @appearance.valid?
-            redirect_to episode_path(@appearance.id)
+            redirect_to episode_path(@appearance.episode.id)
         else
             flash[:error_list] = @appearance.errors.full_messages
             redirect_to new_appearance_path
