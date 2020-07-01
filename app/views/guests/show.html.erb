@@ -1,0 +1,11 @@
+<h1><%= @guest.name %></h1>
+
+<hr>
+<h2>Appearances</h2>
+<ul>
+<% @appearances.each do |appearance| %>
+  <li><h3><%= link_to appearance.episode.num_date , episode_path(appearance.episode) %></h3>
+  <p>Rating: <%= appearance.rating %> <%= "poop".pluralize(appearance.rating) %></p>
+  <br></li>
+<% end %>
+</ul>
