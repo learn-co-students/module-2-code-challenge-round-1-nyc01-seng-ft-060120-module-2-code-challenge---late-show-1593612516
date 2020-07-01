@@ -1,0 +1,11 @@
+<h2>Guest Show Page</h2>
+
+<%= @guest.name %>
+<p>Episodes: </p>
+<% @guest.episodes.each do |e| %>
+<p>Date: </p><%= link_to e.date, episode_path(e) %> <br><p>Ratings (highest):</p>
+<% e.appearances_ordered.each do |a|%>
+  <%= a.rating %> <br>
+  <% end%>
+  <p>Average Rating: </p><%= e.average_rating %>
+<% end %>

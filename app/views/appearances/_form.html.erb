@@ -1,0 +1,15 @@
+<h2>Appearance Form</h2>
+
+<%= form_for @appearance do |a|  %>
+  <%= a.label :episode %>
+  <%= a.collection_select :episode_id, Episode.all, :id, :number %>
+
+  <%= a.label :guest %>
+  <%= a.collection_select :guest_id, Guest.all, :id, :name %>
+
+  <%= a.label :rating %>
+  <%= a.number_field :rating, {min: 1, max: 5} %>
+
+  <%= a.submit %>
+  <% end %>
+
