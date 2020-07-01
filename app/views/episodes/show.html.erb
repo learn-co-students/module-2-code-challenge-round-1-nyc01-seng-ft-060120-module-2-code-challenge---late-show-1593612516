@@ -6,3 +6,5 @@
 <% @episode.appearances.each do |appearance| %>
 <p><%= link_to appearance.guest.name, guest_path(appearance.guest.id) %></p>
 <% end %>
+
+<p>Average rating for the appearances on this episode: <%= @episode.avg_rating %></p>
