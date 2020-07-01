@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :episodes, only: [:index, :show]
 
   # TODO: Limit these paths
-  resources :appearances
+  resources :appearances, only: [:new, :create]
 end
