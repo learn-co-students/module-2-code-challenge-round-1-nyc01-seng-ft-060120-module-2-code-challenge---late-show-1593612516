@@ -1,0 +1,8 @@
+<h1>Guest#show</h1>
+<h2>Appeared On</h2>
+<ul>
+  <% @guest.sorted_apperances.each do |appearance| %>
+    <p>Average Rating: <%= appearance.episode.average_rating %></p>
+    <li><%= link_to appearance.episode.date, episode_path(appearance.episode)%></li>
+  <% end %>
+</ul>
