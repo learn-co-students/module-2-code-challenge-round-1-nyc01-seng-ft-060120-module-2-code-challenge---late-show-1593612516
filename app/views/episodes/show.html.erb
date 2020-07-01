@@ -1,0 +1,8 @@
+<h1>Episode <%= @episode.number %> - <%= @episode.date.strftime("%B %d, %Y") %></h1>
+<h3>Average Rating: <%= @episode.average_rating %></h3>
+<h3><strong>Guests:</strong></h3>
+<ul>
+    <% @episode.guests.each do |g| %>
+        <li><%= link_to g.name, guest_path(g) %></li>
+    <% end %>
+</ul>
