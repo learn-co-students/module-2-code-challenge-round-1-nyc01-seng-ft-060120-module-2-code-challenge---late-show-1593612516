@@ -1,0 +1,19 @@
+<h1>GUEST</h1>
+
+<p>NAME: <%=@guest.name%></p>
+
+<p>OCCUPATION: <%=@guest.occupation%></p>
+
+<h2> EPISODES APPEARED ON</h2>
+
+<%@guest.episodes.each do |episode|%>
+<p><%=link_to episode.date, episode_path(episode.id)%></p>
+<%end%>
+
+<h3>RATING</h3>
+
+<%@guest.episodes.each do|episode|%>
+<p> <%=episode.rating%>
+<%end%>
+
+
