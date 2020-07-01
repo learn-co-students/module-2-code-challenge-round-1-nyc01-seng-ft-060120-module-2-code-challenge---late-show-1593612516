@@ -8,6 +8,4 @@ class GuestsController < ApplicationController
     @guest = Guest.find(params[:id])
   end
 
-   
-  
 end

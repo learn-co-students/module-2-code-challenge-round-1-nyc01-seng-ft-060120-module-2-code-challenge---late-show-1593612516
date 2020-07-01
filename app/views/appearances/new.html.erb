@@ -1,18 +1,18 @@
 <h1>Add New Appearance</h1>
 
-<% if flash [:my_errors] %>
+<% if flash[:my_errors] %>
 <% flash[:my_errors].each do |error| %>
 <%= error %>
 <% end %>
 <% end %>
 
 <%= form_for(@appearance) do |f| %>
-<%= f.label :guest_id, "Pick a Guest" %>
-<%= f.collection_select :guest_id, @guests, :id, :name %>
-<%= f.label :episode_id, "Pick an Episode" %>
+<br><br><%= f.label :guest_id, "Pick a Guest: " %> <br>
+<%= f.collection_select :guest_id, @guests, :id, :name %> 
+<br><br><%= f.label :episode_id, "Pick an Episode: " %> <br>
 <%= f.collection_select :episode_id, @episodes, :id, :number %>
-<%= f.label :rating %>
+<br><br><%= f.label :rating, "Rating (1-5): " %> <br>
 <%= f.number_field :rating %>
-<%= f.submit %>
+<br><br><%= f.submit %>
 
 <% end %>

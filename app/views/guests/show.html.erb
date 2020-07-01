@@ -1,6 +1,6 @@
 <h1><%= @guest.name %></h1>
 <% @guest.episodes.each do |episode|%>
-<%= link_to episode.date, episode_path(episode) %>
+<h3>Episode: <%= link_to episode.date, episode_path(episode) %></h3>
 <% end %>
 
 <% @guest.appearances.each do |appearance| %>
