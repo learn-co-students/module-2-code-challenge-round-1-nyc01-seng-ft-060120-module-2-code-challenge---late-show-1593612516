@@ -1,0 +1,16 @@
+<h1> New Appearance Form </h1>
+
+<%= form_for @appearance do |f|%>
+<%= f.label :guest_id %>
+<%= f.collection_select :guest_id, @guests, :id, :name %>
+
+<%= f.label :episode_id %>
+<%= f.collection_select :episode_id, @episodes, :id, :date  %>
+
+<%= f.label :episode_rating %>
+<%= f.number_field :episode_rating %>
+
+<%= f.submit %>
+<% redirect_to episode_path(@episodes_id)%>
+<% end  %>
+

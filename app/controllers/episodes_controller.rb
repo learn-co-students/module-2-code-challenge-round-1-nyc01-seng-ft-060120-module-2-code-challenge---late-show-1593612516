@@ -3,4 +3,15 @@ class EpisodesController < ApplicationController
   def index
     @episodes = Episode.all
   end
+
+  def show 
+    @episode = Episode.find(params[:id])
+
+    # redirect_to episodes_path(@episode_id)
+  end 
+
+  private 
+   def episode_params
+    params.require(:episode).permit(:date, :number)
+   end 
 end
