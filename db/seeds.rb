@@ -9,6 +9,7 @@
 Guest.destroy_all
 
 require 'csv'
+require 'faker'
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'daily_show_guests.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -25,3 +26,7 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+
+10.times do 
+  Appearance.create(episode_id: Episode.all.sample.id, guest_id: Guest.all.sample.id)
+end 
