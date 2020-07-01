@@ -1,0 +1,15 @@
+<h1>Show Page</h1>
+
+<p>Name: <%= @guest.name%></p>
+<p>Occupation: <%= @guest.occupation %></p>
+
+<p>Episodes<p>
+
+<% @guest.appearances.each do |appearance|%>
+<p><%= appearance.episode.date %></p>
+<%end%>
+
+<p>Rating</p>
+<% @guest.appearances.each do |appearance|%>
+<p><%= appearance.rating %></p>
+<%end%>

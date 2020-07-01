@@ -1,0 +1,11 @@
+<h1>Show Page</h1>
+
+<p>Episode Date: <%= @episode.date%></p>
+<p>Episode Number: <%= @episode.number %></p>
+
+<p>Guests<p>
+
+<% @episode.appearances.each do |appearance|%>
+<p><%= appearance.guest.name %></p>
+<%end%>
+
