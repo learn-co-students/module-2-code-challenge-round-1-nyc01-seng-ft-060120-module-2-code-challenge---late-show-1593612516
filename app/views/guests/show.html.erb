@@ -3,4 +3,5 @@
 <h5> Appeared on </h5>
 <% @guest.episodes.each do |episode| %>
 	Episode: <%= link_to "#{episode.number} - #{episode.date}", episode_path(episode) %>
+	rating: <%= episode.avg_rating%>
 <% end %>
