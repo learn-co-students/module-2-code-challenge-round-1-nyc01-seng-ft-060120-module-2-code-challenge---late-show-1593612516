@@ -3,11 +3,10 @@ class EpisodesController < ApplicationController
 	before_action :find_episode, only: [:show, :edit, :update, :destroy]
 
   def index
-    @episodes = Episode.all
+   @episodes = Episode.all
   end
 
   def show
-
   end
 
   private

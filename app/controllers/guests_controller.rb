@@ -4,7 +4,12 @@ class GuestsController < ApplicationController
 
 
   def index
-    @guests = Guest.all
+    if params[:order]
+      @guests = Guest.all.sort_by(Episode.all.each{|e| e.avg_rating.to_i})
+
+    else
+      @guests = Guest.all
+    end
   end
 
   def show
